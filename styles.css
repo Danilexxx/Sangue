@@ -1156,7 +1156,7 @@ button {
 }
 
 .legenda-container {
-    max-width: 960px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
@@ -1164,16 +1164,90 @@ button {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 24px;
+    padding: 36px 32px;
     box-shadow: var(--shadow-md);
+    text-align: left;
+}
+
+.legenda-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: 8px;
+}
+
+.legenda-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legenda-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+}
+
+.legenda-item-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.legenda-item-perc {
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 90px;
     text-align: center;
 }
 
-.legenda-img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-md);
-    display: block;
+.legenda-item-size {
+    font-weight: 500;
+    color: var(--text-secondary);
+    min-width: 100px;
+    text-align: right;
+}
+
+.legenda-ref {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 12px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.legenda-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .legenda-card {
+        padding: 24px 16px;
+    }
+
+    .legenda-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .legenda-item-perc, .legenda-item-size {
+        text-align: left;
+        min-width: auto;
+    }
 }
 
 /* === Slide Switcher (Sangue Page) === */
