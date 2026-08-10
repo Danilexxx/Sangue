@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sangue - Atlas de Histologia. Explore o tecido sanguíneo com imagens microscópicas em alta resolução e zoom interativo.">
+    <title>Sangue | Atlas de Histologia — UFG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="main-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" id="logo-link">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                        <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Atlas de Histologia</span>
+            </a>
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link" id="nav-home">Início</a>
+                <a href="sangue.html" class="nav-link active" id="nav-sangue">Sangue</a>
+                <a href="epitelio.html" class="nav-link" id="nav-epitelio">Epitélio</a>
+                <a href="conjuntivo.html" class="nav-link" id="nav-conjuntivo">Conjuntivo</a>
+                <a href="cartilagem.html" class="nav-link" id="nav-cartilagem">Cartilagem</a>
+                <a href="osseo.html" class="nav-link" id="nav-osseo">Ósseo</a>
+                <a href="muscular.html" class="nav-link" id="nav-muscular">Muscular</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Início</a>
+            <a href="sangue.html" class="mobile-nav-link active">Sangue</a>
+            <a href="epitelio.html" class="mobile-nav-link">Epitélio</a>
+            <a href="conjuntivo.html" class="mobile-nav-link">Conjuntivo</a>
+            <a href="cartilagem.html" class="mobile-nav-link">Cartilagem</a>
+            <a href="osseo.html" class="mobile-nav-link">Ósseo</a>
+            <a href="muscular.html" class="mobile-nav-link">Muscular</a>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" id="page-hero">
+        <div class="page-hero-inner">
+            <a href="index.html" class="breadcrumb" id="breadcrumb-home">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Voltar aos Tecidos
+            </a>
+            <div class="page-hero-text">
+                <span class="tissue-badge">Tecido A</span>
+                <h1 class="page-hero-title">Sangue</h1>
+                <p class="page-hero-subtitle">Tecido conjuntivo líquido composto por plasma, hemácias, leucócitos e plaquetas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="sangue-content" id="sangue-main">
+        <div class="content-container">
+
+            <!-- Image Viewer Section -->
+            <section class="viewer-section" id="viewer-section">
+                <div class="viewer-header">
+                    <h2 class="viewer-title">Visualizador de Lâminas</h2>
+                    <p class="viewer-subtitle">Use o scroll do mouse ou gesto de pinça para aplicar zoom. Arraste para navegar pela imagem.</p>
+                </div>
+
+                <!-- Thumbnail selector -->
+                <div class="thumbnail-strip" id="thumbnail-strip">
+                    <button class="thumbnail active" data-index="0" id="thumb-0">
+                        <img src="sangue.png" alt="Lâmina de sangue - visão geral">
+                        <span class="thumb-label">Visão Geral</span>
+                    </button>
+                    <button class="thumbnail" data-index="1" id="thumb-1">
+                        <img src="sangue.png" alt="Hemácias">
+                        <span class="thumb-label">Hemácias</span>
+                    </button>
+                    <button class="thumbnail" data-index="2" id="thumb-2">
+                        <img src="sangue.png" alt="Leucócitos">
+                        <span class="thumb-label">Leucócitos</span>
+                    </button>
+                </div>
+
+                <!-- Main Zoom Viewer -->
+                <div class="zoom-viewer" id="zoom-viewer">
+                    <div class="zoom-image-container" id="zoom-container">
+                        <img src="sangue.png" alt="Lâmina histológica de sangue" id="zoom-image" draggable="false">
+                    </div>
+                    <div class="zoom-controls" id="zoom-controls">
+                        <button class="zoom-btn" id="zoom-in-btn" aria-label="Aumentar zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <span class="zoom-level" id="zoom-level">100%</span>
+                        <button class="zoom-btn" id="zoom-out-btn" aria-label="Diminuir zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="zoom-btn" id="zoom-reset-btn" aria-label="Resetar zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C7.8 17 5.85 15.95 4.6 14.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 7V10H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="zoom-btn" id="zoom-fullscreen-btn" aria-label="Tela cheia">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 7V4C3 3.448 3.448 3 4 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13 3H16C16.552 3 17 3.448 17 4V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 13V16C17 16.552 16.552 17 16 17H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 17H4C3.448 17 3 16.552 3 16V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="zoom-hint" id="zoom-hint">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/>
+                            <path d="M8 5V9M8 11V11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Use scroll ou pinça para zoom • Arraste para mover
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section" id="info-section">
+                <div class="info-grid">
+                    <!-- Overview Card -->
+                    <div class="info-card" id="info-overview">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M11 7V12M11 15V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3>Visão Geral</h3>
+                        </div>
+                        <p>O sangue é um tipo especial de <strong>tecido conjuntivo</strong> que circula pelo sistema cardiovascular. É composto por uma parte líquida, o <strong>plasma</strong> (cerca de 55% do volume), e por elementos figurados: <strong>hemácias</strong> (eritrócitos), <strong>leucócitos</strong> (glóbulos brancos) e <strong>plaquetas</strong> (trombócitos).</p>
+                    </div>
+
+                    <!-- Hemácias Card -->
+                    <div class="info-card" id="info-hemacias">
+                        <div class="info-card-header">
+                            <div class="info-icon red">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <ellipse cx="11" cy="11" rx="9" ry="6" stroke="currentColor" stroke-width="1.5"/>
+                                    <ellipse cx="11" cy="11" rx="3" ry="2" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <h3>Hemácias (Eritrócitos)</h3>
+                        </div>
+                        <p>Células <strong>anucleadas</strong> com formato de disco bicôncavo, responsáveis pelo transporte de <strong>O₂</strong> e <strong>CO₂</strong>. Contêm hemoglobina, que confere a coloração vermelha ao sangue. São os elementos mais numerosos, com cerca de <strong>4,5 a 5,5 milhões/mm³</strong>.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">7-8 μm</span>
+                                <span class="stat-label">Diâmetro</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">120 dias</span>
+                                <span class="stat-label">Vida média</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leucócitos Card -->
+                    <div class="info-card" id="info-leucocitos">
+                        <div class="info-card-header">
+                            <div class="info-icon purple">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="9" cy="10" r="3" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                                    <circle cx="13" cy="12" r="2.5" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <h3>Leucócitos (Glóbulos Brancos)</h3>
+                        </div>
+                        <p>Células nucleadas responsáveis pela <strong>defesa do organismo</strong>. Dividem-se em granulócitos (<strong>neutrófilos</strong>, <strong>eosinófilos</strong> e <strong>basófilos</strong>) e agranulócitos (<strong>linfócitos</strong> e <strong>monócitos</strong>). Presentes em quantidade de <strong>5.000 a 10.000/mm³</strong>.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">9-15 μm</span>
+                                <span class="stat-label">Diâmetro</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">5 tipos</span>
+                                <span class="stat-label">Classificação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plaquetas Card -->
+                    <div class="info-card" id="info-plaquetas">
+                        <div class="info-card-header">
+                            <div class="info-icon blue">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="8" cy="11" r="3" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="14" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="14" cy="14" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <h3>Plaquetas (Trombócitos)</h3>
+                        </div>
+                        <p>Fragmentos citoplasmáticos de <strong>megacariócitos</strong> da medula óssea, com papel fundamental na <strong>hemostasia</strong> e <strong>coagulação sanguínea</strong>. São as menores estruturas celulares do sangue. Presentes em quantidade de <strong>150.000 a 400.000/mm³</strong>.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">2-4 μm</span>
+                                <span class="stat-label">Diâmetro</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">8-10 dias</span>
+                                <span class="stat-label">Vida média</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coloração Card -->
+                    <div class="info-card wide" id="info-coloracao">
+                        <div class="info-card-header">
+                            <div class="info-icon green">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <rect x="3" y="3" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M7 14L11 7L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Técnica de Coloração</h3>
+                        </div>
+                        <p>As lâminas de esfregaço sanguíneo são comumente coradas com os métodos de <strong>Giemsa</strong>, <strong>Wright</strong> ou <strong>May-Grünwald-Giemsa (panótico)</strong>. Nestes métodos, as hemácias adquirem coloração <strong>rósea-avermelhada</strong> (acidófilas), os núcleos dos leucócitos coram-se em <strong>azul-violeta</strong> (basófilos), e as plaquetas aparecem como pequenas estruturas <strong>azuladas</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Fullscreen Zoom Modal -->
+    <div class="fullscreen-modal" id="fullscreen-modal">
+        <div class="fullscreen-header">
+            <span class="fullscreen-title">Lâmina de Sangue — Modo Tela Cheia</span>
+            <button class="fullscreen-close" id="fullscreen-close-btn" aria-label="Fechar tela cheia">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="fullscreen-viewer" id="fullscreen-viewer">
+            <div class="fullscreen-image-container" id="fullscreen-container">
+                <img src="sangue.png" alt="Lâmina histológica de sangue — tela cheia" id="fullscreen-image" draggable="false">
+            </div>
+        </div>
+        <div class="fullscreen-controls">
+            <button class="zoom-btn" id="fs-zoom-in" aria-label="Aumentar zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <span class="zoom-level" id="fs-zoom-level">100%</span>
+            <button class="zoom-btn" id="fs-zoom-out" aria-label="Diminuir zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button class="zoom-btn" id="fs-zoom-reset" aria-label="Resetar zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C7.8 17 5.85 15.95 4.6 14.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3 7V10H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia</span>
+                </div>
+                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas de Histologia — UFG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

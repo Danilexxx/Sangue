@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conjuntivo - Atlas de Histologia. Explore o tecido conjuntivo com imagens microscópicas em alta resolução e zoom interativo.">
+    <title>Conjuntivo | Atlas de Histologia — UFG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="main-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" id="logo-link">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                        <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Atlas de Histologia</span>
+            </a>
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link" id="nav-home">Início</a>
+                <a href="sangue.html" class="nav-link" id="nav-sangue">Sangue</a>
+                <a href="epitelio.html" class="nav-link" id="nav-epitelio">Epitélio</a>
+                <a href="conjuntivo.html" class="nav-link active" id="nav-conjuntivo">Conjuntivo</a>
+                <a href="cartilagem.html" class="nav-link" id="nav-cartilagem">Cartilagem</a>
+                <a href="osseo.html" class="nav-link" id="nav-osseo">Ósseo</a>
+                <a href="muscular.html" class="nav-link" id="nav-muscular">Muscular</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Início</a>
+            <a href="sangue.html" class="mobile-nav-link">Sangue</a>
+            <a href="epitelio.html" class="mobile-nav-link">Epitélio</a>
+            <a href="conjuntivo.html" class="mobile-nav-link active">Conjuntivo</a>
+            <a href="cartilagem.html" class="mobile-nav-link">Cartilagem</a>
+            <a href="osseo.html" class="mobile-nav-link">Ósseo</a>
+            <a href="muscular.html" class="mobile-nav-link">Muscular</a>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" id="page-hero">
+        <div class="page-hero-inner">
+            <a href="index.html" class="breadcrumb" id="breadcrumb-home">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Voltar aos Tecidos
+            </a>
+            <div class="page-hero-text">
+                <span class="tissue-badge">Tecido C</span>
+                <h1 class="page-hero-title">Conjuntivo</h1>
+                <p class="page-hero-subtitle">Tecido de suporte e preenchimento com abundante matriz extracelular, responsável pela conexão e sustentação de outros tecidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="sangue-content" id="conjuntivo-main">
+        <div class="content-container">
+
+            <!-- Image Viewer Section -->
+            <section class="viewer-section" id="viewer-section">
+                <div class="viewer-header">
+                    <h2 class="viewer-title">Visualizador de Lâminas</h2>
+                    <p class="viewer-subtitle">Use o scroll do mouse ou gesto de pinça para aplicar zoom. Arraste para navegar pela imagem.</p>
+                </div>
+
+                <!-- Thumbnail selector -->
+                <div class="thumbnail-strip" id="thumbnail-strip">
+                    <button class="thumbnail active" data-index="0" id="thumb-0">
+                        <img src="conjuntivo.png" alt="Lâmina de conjuntivo - visão geral">
+                        <span class="thumb-label">Visão Geral</span>
+                    </button>
+                    <button class="thumbnail" data-index="1" id="thumb-1">
+                        <img src="conjuntivo.png" alt="Conjuntivo frouxo">
+                        <span class="thumb-label">Frouxo</span>
+                    </button>
+                    <button class="thumbnail" data-index="2" id="thumb-2">
+                        <img src="conjuntivo.png" alt="Conjuntivo denso">
+                        <span class="thumb-label">Denso</span>
+                    </button>
+                </div>
+
+                <!-- Main Zoom Viewer -->
+                <div class="zoom-viewer" id="zoom-viewer">
+                    <div class="zoom-image-container" id="zoom-container">
+                        <img src="conjuntivo.png" alt="Lâmina histológica de tecido conjuntivo" id="zoom-image" draggable="false">
+                    </div>
+                    <div class="zoom-controls" id="zoom-controls">
+                        <button class="zoom-btn" id="zoom-in-btn" aria-label="Aumentar zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <span class="zoom-level" id="zoom-level">100%</span>
+                        <button class="zoom-btn" id="zoom-out-btn" aria-label="Diminuir zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="zoom-btn" id="zoom-reset-btn" aria-label="Resetar zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C7.8 17 5.85 15.95 4.6 14.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 7V10H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="zoom-btn" id="zoom-fullscreen-btn" aria-label="Tela cheia">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 7V4C3 3.448 3.448 3 4 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13 3H16C16.552 3 17 3.448 17 4V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 13V16C17 16.552 16.552 17 16 17H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 17H4C3.448 17 3 16.552 3 16V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="zoom-hint" id="zoom-hint">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/>
+                            <path d="M8 5V9M8 11V11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Use scroll ou pinça para zoom • Arraste para mover
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section" id="info-section">
+                <div class="info-grid">
+                    <!-- Overview Card -->
+                    <div class="info-card" id="info-overview">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M11 7V12M11 15V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3>Visão Geral</h3>
+                        </div>
+                        <p>O tecido conjuntivo é o tecido mais <strong>abundante e amplamente distribuído</strong> do corpo. Caracteriza-se pela presença de <strong>células</strong> dispersas em abundante <strong>matriz extracelular</strong> (substância fundamental amorfa + fibras). Tem origem no <strong>mesênquima</strong> (mesoderma) e desempenha funções de sustentação, preenchimento, transporte, defesa e armazenamento.</p>
+                    </div>
+
+                    <!-- Células Card -->
+                    <div class="info-card" id="info-celulas">
+                        <div class="info-card-header">
+                            <div class="info-icon red">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="11" cy="11" r="1" fill="currentColor" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <h3>Células Residentes</h3>
+                        </div>
+                        <p>Inclui <strong>fibroblastos</strong> (síntese de fibras e substância fundamental), <strong>macrófagos</strong> (fagocitose e defesa), <strong>mastócitos</strong> (liberam histamina e heparina), <strong>plasmócitos</strong> (produzem anticorpos) e <strong>adipócitos</strong> (armazenamento de lipídios). Os fibroblastos são as células mais abundantes.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">5+ tipos</span>
+                                <span class="stat-label">Células</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Fibroblasto</span>
+                                <span class="stat-label">Mais comum</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fibras Card -->
+                    <div class="info-card" id="info-fibras">
+                        <div class="info-card-header">
+                            <div class="info-icon purple">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path d="M4 6C8 4 14 8 18 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M4 11C8 9 14 13 18 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M4 16C8 14 14 18 18 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3>Fibras da Matriz</h3>
+                        </div>
+                        <p>Três tipos principais: <strong>colágenas</strong> (resistência à tração, mais abundantes — tipo I, II, III), <strong>elásticas</strong> (elasticidade, compostas de elastina e fibrilina) e <strong>reticulares</strong> (colágeno tipo III, formam redes delicadas em órgãos hematopoiéticos e glândulas).</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">3 tipos</span>
+                                <span class="stat-label">Fibras</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Colágeno</span>
+                                <span class="stat-label">Mais abundante</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Classificação Card -->
+                    <div class="info-card" id="info-classificacao">
+                        <div class="info-card-header">
+                            <div class="info-icon blue">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <rect x="4" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="12" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="4" y="12" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="12" y="12" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <h3>Classificação</h3>
+                        </div>
+                        <p>Divide-se em <strong>conjuntivo propriamente dito</strong> — frouxo (preenchimento, flexível) e denso (modelado e não-modelado, resistente) — e <strong>conjuntivos especializados</strong>: adiposo, elástico, reticular, mucoso. Os tecidos cartilaginoso, ósseo e sanguíneo são também considerados conjuntivos especializados.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">Frouxo</span>
+                                <span class="stat-label">Mais comum</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">2 grupos</span>
+                                <span class="stat-label">Classificação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coloração Card -->
+                    <div class="info-card wide" id="info-coloracao">
+                        <div class="info-card-header">
+                            <div class="info-icon green">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <rect x="3" y="3" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M7 14L11 7L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Técnica de Coloração</h3>
+                        </div>
+                        <p>Com <strong>H&E</strong>, as fibras colágenas coram-se em <strong>rosa</strong> (acidófilas) e os núcleos em <strong>azul-violeta</strong>. A <strong>coloração tricrômica de Masson</strong> evidencia colágeno em azul/verde. Fibras elásticas são visualizadas com <strong>orceína</strong> ou <strong>Verhoeff</strong> (castanho-escuro/preto). Fibras reticulares são demonstradas pela <strong>impregnação argêntica</strong> (prata), corando-se em negro.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Fullscreen Zoom Modal -->
+    <div class="fullscreen-modal" id="fullscreen-modal">
+        <div class="fullscreen-header">
+            <span class="fullscreen-title">Lâmina de Conjuntivo — Modo Tela Cheia</span>
+            <button class="fullscreen-close" id="fullscreen-close-btn" aria-label="Fechar tela cheia">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="fullscreen-viewer" id="fullscreen-viewer">
+            <div class="fullscreen-image-container" id="fullscreen-container">
+                <img src="conjuntivo.png" alt="Lâmina histológica de conjuntivo — tela cheia" id="fullscreen-image" draggable="false">
+            </div>
+        </div>
+        <div class="fullscreen-controls">
+            <button class="zoom-btn" id="fs-zoom-in" aria-label="Aumentar zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <span class="zoom-level" id="fs-zoom-level">100%</span>
+            <button class="zoom-btn" id="fs-zoom-out" aria-label="Diminuir zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button class="zoom-btn" id="fs-zoom-reset" aria-label="Resetar zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C7.8 17 5.85 15.95 4.6 14.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3 7V10H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia</span>
+                </div>
+                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas de Histologia — UFG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ósseo - Atlas de Histologia. Explore o tecido ósseo com imagens microscópicas em alta resolução e zoom interativo.">
+    <title>Ósseo | Atlas de Histologia — UFG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="main-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" id="logo-link">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                        <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Atlas de Histologia</span>
+            </a>
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link" id="nav-home">Início</a>
+                <a href="sangue.html" class="nav-link" id="nav-sangue">Sangue</a>
+                <a href="epitelio.html" class="nav-link" id="nav-epitelio">Epitélio</a>
+                <a href="conjuntivo.html" class="nav-link" id="nav-conjuntivo">Conjuntivo</a>
+                <a href="cartilagem.html" class="nav-link" id="nav-cartilagem">Cartilagem</a>
+                <a href="osseo.html" class="nav-link active" id="nav-osseo">Ósseo</a>
+                <a href="muscular.html" class="nav-link" id="nav-muscular">Muscular</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Início</a>
+            <a href="sangue.html" class="mobile-nav-link">Sangue</a>
+            <a href="epitelio.html" class="mobile-nav-link">Epitélio</a>
+            <a href="conjuntivo.html" class="mobile-nav-link">Conjuntivo</a>
+            <a href="cartilagem.html" class="mobile-nav-link">Cartilagem</a>
+            <a href="osseo.html" class="mobile-nav-link active">Ósseo</a>
+            <a href="muscular.html" class="mobile-nav-link">Muscular</a>
+        </nav>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" id="page-hero">
+        <div class="page-hero-inner">
+            <a href="index.html" class="breadcrumb" id="breadcrumb-home">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Voltar aos Tecidos
+            </a>
+            <div class="page-hero-text">
+                <span class="tissue-badge">Tecido E</span>
+                <h1 class="page-hero-title">Ósseo</h1>
+                <p class="page-hero-subtitle">Tecido conjuntivo especializado com matriz mineralizada, responsável pela sustentação rígida do corpo e proteção de órgãos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="sangue-content" id="osseo-main">
+        <div class="content-container">
+
+            <!-- Image Viewer Section -->
+            <section class="viewer-section" id="viewer-section">
+                <div class="viewer-header">
+                    <h2 class="viewer-title">Visualizador de Lâminas</h2>
+                    <p class="viewer-subtitle">Use o scroll do mouse ou gesto de pinça para aplicar zoom. Arraste para navegar pela imagem.</p>
+                </div>
+
+                <div class="thumbnail-strip" id="thumbnail-strip">
+                    <button class="thumbnail active" data-index="0" id="thumb-0">
+                        <img src="osseo.png" alt="Lâmina de tecido ósseo - visão geral">
+                        <span class="thumb-label">Visão Geral</span>
+                    </button>
+                    <button class="thumbnail" data-index="1" id="thumb-1">
+                        <img src="osseo.png" alt="Osso compacto">
+                        <span class="thumb-label">Compacto</span>
+                    </button>
+                    <button class="thumbnail" data-index="2" id="thumb-2">
+                        <img src="osseo.png" alt="Osso esponjoso">
+                        <span class="thumb-label">Esponjoso</span>
+                    </button>
+                </div>
+
+                <div class="zoom-viewer" id="zoom-viewer">
+                    <div class="zoom-image-container" id="zoom-container">
+                        <img src="osseo.png" alt="Lâmina histológica de tecido ósseo" id="zoom-image" draggable="false">
+                    </div>
+                    <div class="zoom-controls" id="zoom-controls">
+                        <button class="zoom-btn" id="zoom-in-btn" aria-label="Aumentar zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <span class="zoom-level" id="zoom-level">100%</span>
+                        <button class="zoom-btn" id="zoom-out-btn" aria-label="Diminuir zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <button class="zoom-btn" id="zoom-reset-btn" aria-label="Resetar zoom">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C7.8 17 5.85 15.95 4.6 14.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3 7V10H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="zoom-btn" id="zoom-fullscreen-btn" aria-label="Tela cheia">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 7V4C3 3.448 3.448 3 4 3H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13 3H16C16.552 3 17 3.448 17 4V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 13V16C17 16.552 16.552 17 16 17H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 17H4C3.448 17 3 16.552 3 16V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="zoom-hint" id="zoom-hint">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/>
+                            <path d="M8 5V9M8 11V11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Use scroll ou pinça para zoom • Arraste para mover
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section" id="info-section">
+                <div class="info-grid">
+                    <!-- Overview Card -->
+                    <div class="info-card" id="info-overview">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="9.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M11 7V12M11 15V15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3>Visão Geral</h3>
+                        </div>
+                        <p>O tecido ósseo é um conjuntivo especializado com <strong>matriz mineralizada</strong> (hidroxiapatita de cálcio depositada em fibras colágenas tipo I). É o principal componente do <strong>esqueleto</strong>, fornecendo suporte, proteção, locomoção, além de ser <strong>reservatório de cálcio e fósforo</strong> e abrigar a <strong>medula óssea</strong>. É altamente <strong>vascularizado</strong> e apresenta remodelação constante.</p>
+                    </div>
+
+                    <!-- Células Card -->
+                    <div class="info-card" id="info-celulas">
+                        <div class="info-card-header">
+                            <div class="info-icon red">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="11" cy="11" r="1" fill="currentColor" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <h3>Células do Tecido Ósseo</h3>
+                        </div>
+                        <p><strong>Osteoblastos</strong>: sintetizam a matriz orgânica (osteoide) e iniciam a mineralização. <strong>Osteócitos</strong>: células maduras aprisionadas em lacunas, conectadas por canalículos, mantêm a matriz. <strong>Osteoclastos</strong>: células multinucleadas de origem monocítica, responsáveis pela <strong>reabsorção óssea</strong> (borda em escova, lacunas de Howship).</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">3 tipos</span>
+                                <span class="stat-label">Células</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Osteócito</span>
+                                <span class="stat-label">Mais abundante</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compacto Card -->
+                    <div class="info-card" id="info-compacto">
+                        <div class="info-card-header">
+                            <div class="info-icon purple">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                                    <circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+                                    <circle cx="11" cy="11" r="1" fill="currentColor" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <h3>Osso Compacto (Cortical)</h3>
+                        </div>
+                        <p>Forma a <strong>diáfise</strong> dos ossos longos e a camada externa de todos os ossos. Organizado em <strong>sistemas de Havers (ósteons)</strong>: lamelas concêntricas ao redor de um <strong>canal central</strong> (canal de Havers) contendo vasos e nervos. Canais de <strong>Volkmann</strong> conectam os ósteons entre si e com o periósteo/endósteo.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">Ósteon</span>
+                                <span class="stat-label">Unidade estrutural</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">80%</span>
+                                <span class="stat-label">Do esqueleto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Esponjoso Card -->
+                    <div class="info-card" id="info-esponjoso">
+                        <div class="info-card-header">
+                            <div class="info-icon blue">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path d="M5 5L9 9M13 5L9 9M9 9L9 15M9 15L5 18M9 15L13 18M17 5L13 9M13 9V13M13 13L17 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Osso Esponjoso (Trabecular)</h3>
+                        </div>
+                        <p>Encontrado nas <strong>epífises</strong> dos ossos longos e no interior dos ossos chatos e curtos. Formado por <strong>trabéculas ósseas</strong> (espículas) interconectadas, com espaços preenchidos por <strong>medula óssea</strong>. Não possui ósteons típicos — os osteócitos são nutridos por difusão. Distribui forças mecânicas de forma eficiente.</p>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-value">Trabéculas</span>
+                                <span class="stat-label">Estrutura</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">20%</span>
+                                <span class="stat-label">Do esqueleto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coloração Card -->
+                    <div class="info-card wide" id="info-coloracao">
+                        <div class="info-card-header">
+                            <div class="info-icon green">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <rect x="3" y="3" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M7 14L11 7L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Técnica de Coloração e Preparo</h3>
+                        </div>
+                        <p>O tecido ósseo requer <strong>descalcificação</strong> prévia (ácidos ou EDTA) ou pode ser estudado por <strong>desgaste</strong> (osso seco lixado até ficar translúcido). Com <strong>H&E</strong> em cortes descalcificados, a matriz osteoide cora-se em <strong>rosa-acidófilo</strong> e os osteócitos em suas lacunas são visíveis com núcleos basófilos. No desgaste, observam-se lacunas vazias e canalículos preenchidos por ar (escuros). A <strong>coloração de von Kossa</strong> evidencia a mineralização em preto (depósitos de cálcio).</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Fullscreen Zoom Modal -->
+    <div class="fullscreen-modal" id="fullscreen-modal">
+        <div class="fullscreen-header">
+            <span class="fullscreen-title">Lâmina de Tecido Ósseo — Modo Tela Cheia</span>
+            <button class="fullscreen-close" id="fullscreen-close-btn" aria-label="Fechar tela cheia">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="fullscreen-viewer" id="fullscreen-viewer">
+            <div class="fullscreen-image-container" id="fullscreen-container">
+                <img src="osseo.png" alt="Lâmina histológica de tecido ósseo — tela cheia" id="fullscreen-image" draggable="false">
+            </div>
+        </div>
+        <div class="fullscreen-controls">
+            <button class="zoom-btn" id="fs-zoom-in" aria-label="Aumentar zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <span class="zoom-level" id="fs-zoom-level">100%</span>
+            <button class="zoom-btn" id="fs-zoom-out" aria-label="Diminuir zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M6 9H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button class="zoom-btn" id="fs-zoom-reset" aria-label="Resetar zoom">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10C17 13.866 13.866 17 10 17C7.8 17 5.85 15.95 4.6 14.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3 7V10H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia</span>
+                </div>
+                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas de Histologia — UFG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

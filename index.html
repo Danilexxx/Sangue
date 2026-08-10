@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atlas de Histologia - Projeto de Extensão e Cultura da Universidade Federal de Goiás. Explore tecidos histológicos com imagens em alta resolução.">
+    <title>Atlas de Histologia | UFG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="main-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" id="logo-link">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                        <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Atlas de Histologia</span>
+            </a>
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link active" id="nav-home">Início</a>
+                <a href="sangue.html" class="nav-link" id="nav-sangue">Sangue</a>
+                <a href="epitelio.html" class="nav-link" id="nav-epitelio">Epitélio</a>
+                <a href="conjuntivo.html" class="nav-link" id="nav-conjuntivo">Conjuntivo</a>
+                <a href="cartilagem.html" class="nav-link" id="nav-cartilagem">Cartilagem</a>
+                <a href="osseo.html" class="nav-link" id="nav-osseo">Ósseo</a>
+                <a href="muscular.html" class="nav-link" id="nav-muscular">Muscular</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link active">Início</a>
+            <a href="sangue.html" class="mobile-nav-link">Sangue</a>
+            <a href="epitelio.html" class="mobile-nav-link">Epitélio</a>
+            <a href="conjuntivo.html" class="mobile-nav-link">Conjuntivo</a>
+            <a href="cartilagem.html" class="mobile-nav-link">Cartilagem</a>
+            <a href="osseo.html" class="mobile-nav-link">Ósseo</a>
+            <a href="muscular.html" class="mobile-nav-link">Muscular</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <p class="hero-badge">Projeto de Extensão e Cultura</p>
+            <h1 class="hero-title">Atlas de<br><span class="hero-highlight">Histologia</span></h1>
+            <p class="hero-subtitle">Universidade Federal de Goiás</p>
+            <p class="hero-description">Explore os principais tecidos do corpo humano através de imagens microscópicas em alta resolução com funcionalidade de zoom interativo.</p>
+            <a href="#tecidos" class="hero-cta" id="hero-cta">
+                Explorar Tecidos
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 3L8 13M8 13L13 8M8 13L3 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tissue Selection Grid -->
+    <section class="tecidos-section" id="tecidos">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">Coleção de Tecidos</p>
+                <h2 class="section-title">Selecione um Tecido</h2>
+                <p class="section-desc">Clique em um tecido para explorar suas características histológicas em detalhes.</p>
+            </div>
+
+            <div class="tissue-grid" id="tissue-grid">
+                <!-- A - Sangue -->
+                <a href="sangue.html" class="tissue-card" id="card-sangue">
+                    <div class="tissue-card-image">
+                        <img src="sangue.png" alt="Tecido Sanguíneo visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">A</span>
+                        <h3 class="tissue-name">Sangue</h3>
+                        <p class="tissue-desc">Hemácias, leucócitos e plaquetas</p>
+                    </div>
+                </a>
+
+                <!-- B - Epitélio -->
+                <a href="epitelio.html" class="tissue-card" id="card-epitelio">
+                    <div class="tissue-card-image">
+                        <img src="epitelio.png" alt="Tecido Epitelial visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">B</span>
+                        <h3 class="tissue-name">Epitélio</h3>
+                        <p class="tissue-desc">Revestimento e secreção</p>
+                    </div>
+                </a>
+
+                <!-- C - Conjuntivo -->
+                <a href="conjuntivo.html" class="tissue-card" id="card-conjuntivo">
+                    <div class="tissue-card-image">
+                        <img src="conjuntivo.png" alt="Tecido Conjuntivo visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">C</span>
+                        <h3 class="tissue-name">Conjuntivo</h3>
+                        <p class="tissue-desc">Suporte e preenchimento</p>
+                    </div>
+                </a>
+
+                <!-- D - Cartilagem -->
+                <a href="cartilagem.html" class="tissue-card" id="card-cartilagem">
+                    <div class="tissue-card-image">
+                        <img src="cartilagem.png" alt="Tecido Cartilaginoso visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">D</span>
+                        <h3 class="tissue-name">Cartilagem</h3>
+                        <p class="tissue-desc">Sustentação flexível</p>
+                    </div>
+                </a>
+
+                <!-- E - Ósseo -->
+                <a href="osseo.html" class="tissue-card" id="card-osseo">
+                    <div class="tissue-card-image">
+                        <img src="osseo.png" alt="Tecido Ósseo visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">E</span>
+                        <h3 class="tissue-name">Ósseo</h3>
+                        <p class="tissue-desc">Sustentação rígida</p>
+                    </div>
+                </a>
+
+                <!-- F - Muscular -->
+                <a href="muscular.html" class="tissue-card" id="card-muscular">
+                    <div class="tissue-card-image">
+                        <img src="muscular.png" alt="Tecido Muscular visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">F</span>
+                        <h3 class="tissue-name">Muscular</h3>
+                        <p class="tissue-desc">Contração e movimento</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia</span>
+                </div>
+                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas de Histologia — UFG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
