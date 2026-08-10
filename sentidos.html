@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Muscular - Atlas de Histologia. Explore o tecido muscular com imagens microscópicas em alta resolução e zoom interativo.">
-    <title>Muscular | Atlas de Histologia — UFG</title>
+    <meta name="description" content="Órgãos do Sentido - Atlas de Histologia UFG. Explore o tecido com imagens microscópicas em alta resolução e zoom interativo.">
+    <title>Órgãos do Sentido | Atlas de Histologia — UFG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,12 +26,7 @@
             </a>
             <nav class="nav" id="main-nav">
                 <a href="index.html" class="nav-link" id="nav-home">Início</a>
-                <a href="sangue.html" class="nav-link" id="nav-sangue">Sangue</a>
-                <a href="epitelio.html" class="nav-link" id="nav-epitelio">Epitélio</a>
-                <a href="conjuntivo.html" class="nav-link" id="nav-conjuntivo">Conjuntivo</a>
-                <a href="cartilagem.html" class="nav-link" id="nav-cartilagem">Cartilagem</a>
-                <a href="osseo.html" class="nav-link" id="nav-osseo">Ósseo</a>
-                <a href="muscular.html" class="nav-link active" id="nav-muscular">Muscular</a>
+                <a href="index.html#tecidos" class="nav-link">Módulos</a>
             </nav>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
                 <span></span>
@@ -45,12 +40,7 @@
     <div class="mobile-nav-overlay" id="mobile-nav-overlay">
         <nav class="mobile-nav">
             <a href="index.html" class="mobile-nav-link">Início</a>
-            <a href="sangue.html" class="mobile-nav-link">Sangue</a>
-            <a href="epitelio.html" class="mobile-nav-link">Epitélio</a>
-            <a href="conjuntivo.html" class="mobile-nav-link">Conjuntivo</a>
-            <a href="cartilagem.html" class="mobile-nav-link">Cartilagem</a>
-            <a href="osseo.html" class="mobile-nav-link">Ósseo</a>
-            <a href="muscular.html" class="mobile-nav-link active">Muscular</a>
+            <a href="index.html#tecidos" class="mobile-nav-link">Módulos (A - R)</a>
         </nav>
     </div>
 
@@ -61,30 +51,31 @@
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Voltar aos Tecidos
+                Voltar aos Módulos
             </a>
             <div class="page-hero-text">
-                <span class="tissue-badge">Tecido F</span>
-                <h1 class="page-hero-title">Muscular</h1>
-                <p class="page-hero-subtitle">Tecido especializado em contração e movimento, composto por células alongadas ricas em filamentos contráteis.</p>
+                <span class="tissue-badge">Módulo O</span>
+                <h1 class="page-hero-title">Órgãos do Sentido</h1>
+                <p class="page-hero-subtitle">Estruturas receptoras altamente especializadas para visão, audição, olfato e paladar.</p>
             </div>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="sangue-content" id="muscular-main">
+    <main class="sangue-content" id="sentidos-main">
         <div class="content-container">
 
             <!-- Image Viewer Section -->
             <section class="viewer-section" id="viewer-section">
                 <div class="viewer-header">
                     <h2 class="viewer-title">Visualizador de Lâminas</h2>
-                    <p class="viewer-subtitle">Use o scroll do mouse ou gesto de pinça para aplicar zoom. Arraste para navegar pela imagem.</p>
+                    <p class="viewer-subtitle">Use o scroll do mouse ou toque duplo para aplicar zoom. Arraste para navegar pela imagem em alta resolução.</p>
                 </div>
 
+                <!-- Main Zoom Viewer -->
                 <div class="zoom-viewer" id="zoom-viewer">
                     <div class="zoom-image-container" id="zoom-container">
-                        <img src="muscular.png" alt="Lâmina histológica de tecido muscular" id="zoom-image" draggable="false">
+                        <img src="sentidos.png" alt="Lâmina histológica de Órgãos do Sentido" id="zoom-image" draggable="false">
                     </div>
                     <div class="zoom-controls" id="zoom-controls">
                         <button class="zoom-btn" id="zoom-in-btn" aria-label="Aumentar zoom">
@@ -122,7 +113,7 @@
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/>
                             <path d="M8 5V9M8 11V11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
-                        Use scroll ou pinça para zoom • Arraste para mover
+                        Use scroll ou toque duplo para zoom • Arraste em 360° para mover
                     </div>
                 </div>
             </section>
@@ -141,79 +132,34 @@
                             </div>
                             <h3>Visão Geral</h3>
                         </div>
-                        <p>O tecido muscular é constituído por células <strong>alongadas</strong> (fibras musculares) especializadas em <strong>contração</strong>. Contém abundantes <strong>miofilamentos</strong> de actina e miosina responsáveis pelo movimento. Divide-se em três tipos: <strong>esquelético</strong>, <strong>cardíaco</strong> e <strong>liso</strong>, cada um com características morfológicas e funcionais distintas.</p>
+                        <p>Organizam-se para captar estímulos do meio externo e transformá-los em impulsos nervosos. Incluem o olho (visão), orelha (audição/equilíbrio), mucosa olfatória e papilas gustativas.</p>
                     </div>
 
-                    <!-- Esquelético Card -->
-                    <div class="info-card" id="info-esqueletico">
+                    <!-- Card 1 -->
+                    <div class="info-card">
                         <div class="info-card-header">
                             <div class="info-icon red">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                    <path d="M4 8H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M4 11H18" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
-                                    <path d="M4 14H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="1" opacity="0.5"/>
                                 </svg>
                             </div>
-                            <h3>Músculo Esquelético (Estriado)</h3>
+                            <h3>Retina Ocular</h3>
                         </div>
-                        <p>Fibras <strong>cilíndricas</strong>, muito longas (até 30 cm), <strong>multinucleadas</strong> com núcleos periféricos. Apresenta <strong>estriações transversais</strong> visíveis (bandas A escuras e I claras, linha Z, sarcômero). Contração <strong>voluntária</strong>, rápida e vigorosa. Inervado por nervos somáticos. Constitui cerca de <strong>40% da massa corporal</strong>.</p>
-                        <div class="info-stats">
-                            <div class="stat">
-                                <span class="stat-value">10-100 μm</span>
-                                <span class="stat-label">Diâmetro</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">Voluntária</span>
-                                <span class="stat-label">Contração</span>
-                            </div>
-                        </div>
+                        <p>Camada fotossensível do olho composta por 10 camadas histológicas. Contém fotorreceptores (conos para cores e bastonetes para luz fraca), células bipolares e ganglionares.</p>
                     </div>
 
-                    <!-- Cardíaco Card -->
-                    <div class="info-card" id="info-cardiaco">
+                    <!-- Card 2 -->
+                    <div class="info-card">
                         <div class="info-card-header">
                             <div class="info-icon purple">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                    <path d="M11 18L5 12C3 10 3 7 5 5.5C7 4 9 4.5 11 7C13 4.5 15 4 17 5.5C19 7 19 10 17 12L11 18Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <path d="M4 6H18M4 11H18M4 16H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
                             </div>
-                            <h3>Músculo Cardíaco</h3>
+                            <h3>Orelha Interna</h3>
                         </div>
-                        <p>Fibras <strong>ramificadas</strong>, com 1–2 <strong>núcleos centrais</strong>. Apresenta estriações transversais e <strong>discos intercalares</strong> (junções especializadas que conectam células adjacentes — desmossomos, junções aderentes e gap junctions). Contração <strong>involuntária</strong>, rítmica e contínua. Possui células do <strong>sistema de condução</strong> (Purkinje).</p>
-                        <div class="info-stats">
-                            <div class="stat">
-                                <span class="stat-value">15 μm</span>
-                                <span class="stat-label">Diâmetro</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">Involuntária</span>
-                                <span class="stat-label">Contração</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Liso Card -->
-                    <div class="info-card" id="info-liso">
-                        <div class="info-card-header">
-                            <div class="info-icon blue">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                    <ellipse cx="11" cy="11" rx="8" ry="4" stroke="currentColor" stroke-width="1.5"/>
-                                    <ellipse cx="11" cy="11" rx="3" ry="1.5" fill="currentColor" opacity="0.3"/>
-                                </svg>
-                            </div>
-                            <h3>Músculo Liso</h3>
-                        </div>
-                        <p>Células <strong>fusiformes</strong> com único <strong>núcleo central</strong> alongado. <strong>Sem estriações</strong> visíveis (filamentos de actina e miosina desorganizados). Contração <strong>involuntária</strong>, lenta e sustentada. Encontrado nas paredes de <strong>vísceras ocas</strong> (tubo digestório, bexiga, útero), vasos sanguíneos, vias aéreas e músculos eretores dos pelos.</p>
-                        <div class="info-stats">
-                            <div class="stat">
-                                <span class="stat-value">5-10 μm</span>
-                                <span class="stat-label">Diâmetro</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-value">Involuntária</span>
-                                <span class="stat-label">Contração</span>
-                            </div>
-                        </div>
+                        <p>Contém o labirinto membranoso com a cóclea (órgão de Corti para audição) e o aparelho vestibular (máculas e cristas ampolares para equilíbrio corporal).</p>
                     </div>
 
                     <!-- Coloração Card -->
@@ -227,7 +173,7 @@
                             </div>
                             <h3>Técnica de Coloração</h3>
                         </div>
-                        <p>Com <strong>H&E</strong>, o citoplasma das fibras musculares (sarcoplasma) cora-se em <strong>rosa intenso</strong> (acidófilo pela abundância de proteínas contráteis) e os núcleos em <strong>azul-violeta</strong>. As estriações são visíveis em cortes longitudinais. A <strong>coloração tricrômica de Masson</strong> diferencia fibras musculares (vermelho) do tecido conjuntivo intersticial (azul). O <strong>PTAH</strong> (hematoxilina fosfotúngstica ácida) cora especificamente as <strong>estriações e discos intercalares</strong> em azul-escuro.</p>
+                        <p>H&E destaca as camadas nucleares e plexiformes da retina em bandas alternadas rosa e azul-violeta. Impregnação metálica revela células sensoriais.</p>
                     </div>
                 </div>
             </section>
@@ -238,7 +184,7 @@
     <!-- Fullscreen Zoom Modal -->
     <div class="fullscreen-modal" id="fullscreen-modal">
         <div class="fullscreen-header">
-            <span class="fullscreen-title">Lâmina de Tecido Muscular — Modo Tela Cheia</span>
+            <span class="fullscreen-title">Órgãos do Sentido — Modo Tela Cheia</span>
             <button class="fullscreen-close" id="fullscreen-close-btn" aria-label="Fechar tela cheia">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -247,7 +193,7 @@
         </div>
         <div class="fullscreen-viewer" id="fullscreen-viewer">
             <div class="fullscreen-image-container" id="fullscreen-container">
-                <img src="muscular.png" alt="Lâmina histológica de tecido muscular — tela cheia" id="fullscreen-image" draggable="false">
+                <img src="sentidos.png" alt="Lâmina histológica de Órgãos do Sentido — tela cheia" id="fullscreen-image" draggable="false">
             </div>
         </div>
         <div class="fullscreen-controls">
@@ -289,10 +235,13 @@
                     </div>
                     <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia</span>
                 </div>
-                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.</p>
+                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.<br>
+                <strong>Coordenador:</strong> Prof. Jayrson Araújo de Oliveira<br>
+                <strong>Web-Designer:</strong> Livia de Freitas Polidorio<br>
+                <em>Instituto de Ciências Biológicas — ICB 3 / UFG</em></p>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Atlas de Histologia — UFG. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Atlas de Histologia — UFG. Contato: jayrson@ufg.br</p>
             </div>
         </div>
     </footer>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atlas de Histologia - Projeto de Extensão e Cultura da Universidade Federal de Goiás. Explore tecidos histológicos com imagens em alta resolução.">
+    <meta name="description" content="Atlas de Histologia — Projeto de Extensão e Cultura da Universidade Federal de Goiás. Módulos A a R com lâminas histológicas microscópicas em alta resolução e zoom interativo.">
     <title>Atlas de Histologia | UFG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +26,8 @@
             </a>
             <nav class="nav" id="main-nav">
                 <a href="index.html" class="nav-link active" id="nav-home">Início</a>
-                <a href="sangue.html" class="nav-link" id="nav-sangue">Sangue</a>
-                <a href="epitelio.html" class="nav-link" id="nav-epitelio">Epitélio</a>
-                <a href="conjuntivo.html" class="nav-link" id="nav-conjuntivo">Conjuntivo</a>
-                <a href="cartilagem.html" class="nav-link" id="nav-cartilagem">Cartilagem</a>
-                <a href="osseo.html" class="nav-link" id="nav-osseo">Ósseo</a>
-                <a href="muscular.html" class="nav-link" id="nav-muscular">Muscular</a>
+                <a href="#tecidos" class="nav-link">Módulos (A - R)</a>
+                <a href="#creditos" class="nav-link">Créditos</a>
             </nav>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
                 <span></span>
@@ -45,12 +41,8 @@
     <div class="mobile-nav-overlay" id="mobile-nav-overlay">
         <nav class="mobile-nav">
             <a href="index.html" class="mobile-nav-link active">Início</a>
-            <a href="sangue.html" class="mobile-nav-link">Sangue</a>
-            <a href="epitelio.html" class="mobile-nav-link">Epitélio</a>
-            <a href="conjuntivo.html" class="mobile-nav-link">Conjuntivo</a>
-            <a href="cartilagem.html" class="mobile-nav-link">Cartilagem</a>
-            <a href="osseo.html" class="mobile-nav-link">Ósseo</a>
-            <a href="muscular.html" class="mobile-nav-link">Muscular</a>
+            <a href="#tecidos" class="mobile-nav-link">Módulos (A - R)</a>
+            <a href="#creditos" class="mobile-nav-link">Créditos</a>
         </nav>
     </div>
 
@@ -58,12 +50,12 @@
     <section class="hero" id="hero-section">
         <div class="hero-bg-pattern"></div>
         <div class="hero-content">
-            <p class="hero-badge">Projeto de Extensão e Cultura</p>
+            <p class="hero-badge">Projeto de Extensão e Cultura • UFG</p>
             <h1 class="hero-title">Atlas de<br><span class="hero-highlight">Histologia</span></h1>
-            <p class="hero-subtitle">Universidade Federal de Goiás</p>
-            <p class="hero-description">Explore os principais tecidos do corpo humano através de imagens microscópicas em alta resolução com funcionalidade de zoom interativo.</p>
+            <p class="hero-subtitle">Universidade Federal de Goiás • ICB 3</p>
+            <p class="hero-description">Este atlas objetiva levar o conhecimento de histologia a todos os alunos dos cursos da área biológica e ao mesmo tempo divulgar o trabalho de extensão da UFG.</p>
             <a href="#tecidos" class="hero-cta" id="hero-cta">
-                Explorar Tecidos
+                Explorar Módulos (A - R)
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M8 3L8 13M8 13L13 8M8 13L3 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -75,9 +67,9 @@
     <section class="tecidos-section" id="tecidos">
         <div class="section-container">
             <div class="section-header">
-                <p class="section-label">Coleção de Tecidos</p>
-                <h2 class="section-title">Selecione um Tecido</h2>
-                <p class="section-desc">Clique em um tecido para explorar suas características histológicas em detalhes.</p>
+                <p class="section-label">Coleção Completa de Histologia</p>
+                <h2 class="section-title">Módulos de Estudo (A ao R)</h2>
+                <p class="section-desc">Clique em um módulo para explorar suas lâminas microscópicas com zoom interativo em alta resolução.</p>
             </div>
 
             <div class="tissue-grid" id="tissue-grid">
@@ -133,29 +125,185 @@
                     </div>
                 </a>
 
-                <!-- E - Ósseo -->
-                <a href="osseo.html" class="tissue-card" id="card-osseo">
+                <!-- E - Osso -->
+                <a href="osseo.html" class="tissue-card" id="card-osso">
                     <div class="tissue-card-image">
                         <img src="osseo.png" alt="Tecido Ósseo visto ao microscópio" loading="lazy">
                         <div class="tissue-card-overlay"></div>
                     </div>
                     <div class="tissue-card-info">
                         <span class="tissue-letter">E</span>
-                        <h3 class="tissue-name">Ósseo</h3>
+                        <h3 class="tissue-name">Osso</h3>
                         <p class="tissue-desc">Sustentação rígida</p>
                     </div>
                 </a>
 
-                <!-- F - Muscular -->
-                <a href="muscular.html" class="tissue-card" id="card-muscular">
+                <!-- F - Músculo -->
+                <a href="muscular.html" class="tissue-card" id="card-musculo">
                     <div class="tissue-card-image">
                         <img src="muscular.png" alt="Tecido Muscular visto ao microscópio" loading="lazy">
                         <div class="tissue-card-overlay"></div>
                     </div>
                     <div class="tissue-card-info">
                         <span class="tissue-letter">F</span>
-                        <h3 class="tissue-name">Muscular</h3>
+                        <h3 class="tissue-name">Músculo</h3>
                         <p class="tissue-desc">Contração e movimento</p>
+                    </div>
+                </a>
+
+                <!-- G - Nervoso -->
+                <a href="nervoso.html" class="tissue-card" id="card-nervoso">
+                    <div class="tissue-card-image">
+                        <img src="nervoso.png" alt="Tecido Nervoso visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">G</span>
+                        <h3 class="tissue-name">Nervoso</h3>
+                        <p class="tissue-desc">Condução de impulsos e integração</p>
+                    </div>
+                </a>
+
+                <!-- H - Vascular -->
+                <a href="vascular.html" class="tissue-card" id="card-vascular">
+                    <div class="tissue-card-image">
+                        <img src="vascular.png" alt="Sistema Vascular visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">H</span>
+                        <h3 class="tissue-name">Vascular</h3>
+                        <p class="tissue-desc">Artérias, veias e capilares</p>
+                    </div>
+                </a>
+
+                <!-- I - Linfático -->
+                <a href="linfatico.html" class="tissue-card" id="card-linfatico">
+                    <div class="tissue-card-image">
+                        <img src="linfatico.png" alt="Sistema Linfático visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">I</span>
+                        <h3 class="tissue-name">Linfático</h3>
+                        <p class="tissue-desc">Defesa imunológica e filtragem</p>
+                    </div>
+                </a>
+
+                <!-- J - Digestório -->
+                <a href="digestorio.html" class="tissue-card" id="card-digestorio">
+                    <div class="tissue-card-image">
+                        <img src="digestorio.png" alt="Sistema Digestório visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">J</span>
+                        <h3 class="tissue-name">Digestório</h3>
+                        <p class="tissue-desc">Tubo digestório e glândulas anexas</p>
+                    </div>
+                </a>
+
+                <!-- K - Pele -->
+                <a href="pele.html" class="tissue-card" id="card-pele">
+                    <div class="tissue-card-image">
+                        <img src="pele.png" alt="Pele e tegumento visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">K</span>
+                        <h3 class="tissue-name">Pele</h3>
+                        <p class="tissue-desc">Epiderme, derme e anexos</p>
+                    </div>
+                </a>
+
+                <!-- L - Respiratório -->
+                <a href="respiratorio.html" class="tissue-card" id="card-respiratorio">
+                    <div class="tissue-card-image">
+                        <img src="respiratorio.png" alt="Sistema Respiratório visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">L</span>
+                        <h3 class="tissue-name">Respiratório</h3>
+                        <p class="tissue-desc">Vias aéreas e trocas gasosas</p>
+                    </div>
+                </a>
+
+                <!-- M - Urinário -->
+                <a href="urinario.html" class="tissue-card" id="card-urinario">
+                    <div class="tissue-card-image">
+                        <img src="urinario.png" alt="Sistema Urinário visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">M</span>
+                        <h3 class="tissue-name">Urinário</h3>
+                        <p class="tissue-desc">Filtração e excreção renal</p>
+                    </div>
+                </a>
+
+                <!-- N - Glândulas Endócrinas -->
+                <a href="endocrinas.html" class="tissue-card" id="card-endocrinas">
+                    <div class="tissue-card-image">
+                        <img src="endocrinas.png" alt="Glândulas Endócrinas vistas ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">N</span>
+                        <h3 class="tissue-name">Glândulas Endócrinas</h3>
+                        <p class="tissue-desc">Produção e secreção hormonal</p>
+                    </div>
+                </a>
+
+                <!-- O - Órgãos do Sentido -->
+                <a href="sentidos.html" class="tissue-card" id="card-sentidos">
+                    <div class="tissue-card-image">
+                        <img src="sentidos.png" alt="Órgãos do Sentido vistos ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">O</span>
+                        <h3 class="tissue-name">Órgãos do Sentido</h3>
+                        <p class="tissue-desc">Receptores de visão, audição e tato</p>
+                    </div>
+                </a>
+
+                <!-- P - Reprodutor Masculino -->
+                <a href="reprodutor-masculino.html" class="tissue-card" id="card-reprodutor-masculino">
+                    <div class="tissue-card-image">
+                        <img src="reprodutor_masculino.png" alt="Reprodutor Masculino visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">P</span>
+                        <h3 class="tissue-name">Reprodutor Masculino</h3>
+                        <p class="tissue-desc">Espermatogênese e hormônios</p>
+                    </div>
+                </a>
+
+                <!-- Q - Reprodutor Feminino -->
+                <a href="reprodutor-feminino.html" class="tissue-card" id="card-reprodutor-feminino">
+                    <div class="tissue-card-image">
+                        <img src="reprodutor_feminino.png" alt="Reprodutor Feminino visto ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">Q</span>
+                        <h3 class="tissue-name">Reprodutor Feminino</h3>
+                        <p class="tissue-desc">Ovogênese, ovários e ciclo uterino</p>
+                    </div>
+                </a>
+
+                <!-- R - Anexas Embrionárias -->
+                <a href="anexas-embrionarias.html" class="tissue-card" id="card-anexas-embrionarias">
+                    <div class="tissue-card-image">
+                        <img src="anexas_embrionarias.png" alt="Estruturas Anexas Embrionárias vistas ao microscópio" loading="lazy">
+                        <div class="tissue-card-overlay"></div>
+                    </div>
+                    <div class="tissue-card-info">
+                        <span class="tissue-letter">R</span>
+                        <h3 class="tissue-name">Anexas Embrionárias</h3>
+                        <p class="tissue-desc">Placenta, cordão e membranas</p>
                     </div>
                 </a>
             </div>
@@ -163,7 +311,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="main-footer">
+    <footer class="footer" id="creditos">
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="logo">
@@ -174,12 +322,15 @@
                             <circle cx="14" cy="14" r="2" fill="currentColor" opacity="0.8"/>
                         </svg>
                     </div>
-                    <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia</span>
+                    <span class="logo-text" style="font-size: 0.95rem;">Atlas de Histologia — UFG</span>
                 </div>
-                <p class="footer-desc">Projeto de Extensão e Cultura da Universidade Federal de Goiás.</p>
+                <p class="footer-desc">Este atlas objetiva levar o conhecimento de histologia a todos os alunos dos cursos da área biológica e ao mesmo tempo divulgar o trabalho de extensão da UFG.<br><br>
+                <strong>Professor-Coordenador:</strong> Prof. Jayrson Araújo de Oliveira<br>
+                <strong>Web-Designer:</strong> Livia de Freitas Polidorio<br>
+                <em>Instituto de Ciências Biológicas — Departamento de Histologia, Embriologia e Biologia Celular (ICB 3 / UFG)</em></p>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Atlas de Histologia — UFG. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Atlas de Histologia — Universidade Federal de Goiás. Informações, correções ou dúvidas envie para: <strong>jayrson@ufg.br</strong></p>
             </div>
         </div>
     </footer>
