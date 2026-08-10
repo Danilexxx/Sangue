@@ -8,10 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initScrollAnimations();
 
-    // Only init viewer on the sangue page
+    // Only init viewer on tissue pages
     if (document.getElementById('zoom-viewer')) {
         initZoomViewer();
         initThumbnails();
+        initSlideSelector();
         initFullscreen();
     }
 });
@@ -309,6 +310,28 @@ function initThumbnails() {
             if (img) {
                 zoomImage.src = img.src;
                 zoomImage.alt = img.alt;
+                if (mainViewerController) mainViewerController.reset();
+            }
+        });
+    });
+}
+
+/* ========================================
+   Slide selector (Lâminas de sangue)
+   ======================================== */
+function initSlideSelector() {
+    const btns = document.querySelectorAll('.slide-tab-btn');
+    const zoomImage = document.getElementById('zoom-image');
+    if (!btns.length || !zoomImage) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const newSrc = btn.getAttribute('data-img');
+            if (newSrc) {
+                zoomImage.src = newSrc;
                 if (mainViewerController) mainViewerController.reset();
             }
         });

@@ -78,16 +78,23 @@
             <!-- Image Viewer Section -->
             <section class="viewer-section" id="viewer-section">
                 <div class="viewer-header">
-                    <h2 class="viewer-title">Visualizador de Lâminas</h2>
-                    <p class="viewer-subtitle">Use o scroll do mouse ou gesto de pinça para aplicar zoom. Arraste para navegar pela imagem.</p>
+                    <h2 class="viewer-title">Visualizador de Lâminas de Sangue</h2>
+                    <p class="viewer-subtitle">Selecione uma das lâminas abaixo e use o toque duplo ou scroll para aplicar zoom. Arraste em 360° para navegar.</p>
                 </div>
 
-
+                <!-- Slide Selector Buttons -->
+                <div class="slide-selector" id="slide-selector">
+                    <button class="slide-tab-btn active" data-img="sangue.jpg">Lâmina Geral</button>
+                    <button class="slide-tab-btn" data-img="sangue_lamina1.jpg">Lâmina de Esfregaço 1</button>
+                    <button class="slide-tab-btn" data-img="sangue_lamina2.jpg">Lâmina de Esfregaço 2</button>
+                    <button class="slide-tab-btn" data-img="sangue_lamina3.jpg">Lâmina de Esfregaço 3</button>
+                    <button class="slide-tab-btn" data-img="sangue_lamina4.jpg">Lâmina de Esfregaço 4</button>
+                </div>
 
                 <!-- Main Zoom Viewer -->
                 <div class="zoom-viewer" id="zoom-viewer">
                     <div class="zoom-image-container" id="zoom-container">
-                        <img src="sangue.png" alt="Lâmina histológica de sangue" id="zoom-image" draggable="false">
+                        <img src="sangue.jpg" alt="Lâmina histológica de sangue" id="zoom-image" draggable="false">
                     </div>
                     <div class="zoom-controls" id="zoom-controls">
                         <button class="zoom-btn" id="zoom-in-btn" aria-label="Aumentar zoom">
@@ -252,7 +259,7 @@
         </div>
         <div class="fullscreen-viewer" id="fullscreen-viewer">
             <div class="fullscreen-image-container" id="fullscreen-container">
-                <img src="sangue.png" alt="Lâmina histológica de sangue — tela cheia" id="fullscreen-image" draggable="false">
+                <img src="sangue.jpg" alt="Lâmina histológica de sangue — tela cheia" id="fullscreen-image" draggable="false">
             </div>
         </div>
         <div class="fullscreen-controls">
